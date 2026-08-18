@@ -140,7 +140,7 @@ img { max-width: 100%; height: auto; }
   font-size: 0.75rem;
   font-weight: 800;
   color: #fff;
-  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  background: linear-gradient(135deg, #000000, #06b6d4);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   flex-shrink: 0;
 }
