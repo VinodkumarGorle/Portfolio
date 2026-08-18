@@ -47,7 +47,7 @@ Then visit `http://localhost:8080`
 │   │   └── architecture/
 │   ├── icons/
 │   └── resume/
-│       └── Vinod_Kumar_Gorle_Resume.pdf
+│       └── Vinod_Kumar_Gorle_AI_GenAI_Engineer_Resume.pdf
 │
 ├── generate_resume.py
 └── README.md
@@ -134,7 +134,7 @@ No jQuery or AJAX libraries are used.
 
 ## Replace Resume
 
-Replace `assets/resume/Vinod_Kumar_Gorle_Resume.pdf` with your PDF. Keep the same filename. Your actual resume is the source of truth — do not regenerate it with `generate_resume.py` for deployment.
+Replace `assets/resume/Vinod_Kumar_Gorle_AI_GenAI_Engineer_Resume.pdf` with your PDF. Keep the same filename. Your actual resume is the source of truth — do not regenerate it with `generate_resume.py` for deployment.
 
 ## License
 
