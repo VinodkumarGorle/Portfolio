@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architecture | Vinod Kumar Gorle</title>
+  <meta name="description" content="AI system architectures — RAG, multimodal retrieval, AI/ML pipelines, and Azure cloud AI deployment.">
+  <link rel="canonical" href="https://vinodkumargorle.dev/architecture.html">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-ai fixed-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand brand-lockup" href="index.html">
+        <span class="brand-icon" aria-hidden="true">VK</span>
+        <span class="brand-text"><span class="brand-name">Vinod Kumar Gorle</span><span class="brand-subtitle">AI / GenAI Engineer</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="architecture.html">Architecture</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Switch to light mode" title="Light mode"><i class="bi bi-sun-fill"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <span class="section-label fade-in">System Design</span>
+      <h1 class="fade-in">AI System Architectures</h1>
+      <p class="section-subtitle fade-in">End-to-end patterns for retrieval, multimodal AI, machine learning, and Azure cloud deployment.</p>
+    </div>
+  </header>
+
+  <main class="container pb-5">
+    <div class="arch-grid">
+      <section class="arch-section fade-in">
+        <div class="architecture-panel">
+          <h3>RAG Architecture</h3>
+          <div class="architecture-flow">
+            <div class="architecture-node">Documents</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Parsing</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Chunking</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node node-blue">Embeddings</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Vector Index</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Retriever</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Top-K</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Context</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node node-purple">LLM</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node pulse">Grounded Response</div>
+          </div>
+        </div>
+      </section>
+      <section class="arch-section fade-in">
+        <div class="architecture-panel">
+          <h3>Multimodal AI Architecture</h3>
+          <div class="architecture-flow">
+            <div class="architecture-node">Image</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node node-purple">VLM</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Metadata</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node node-blue">BGE-M3</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Image</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node node-orange">SigLIP</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node node-cyan">Image Embedding</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Multimodal Retrieval</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node node-red">Reranking</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node pulse">Results</div>
+          </div>
+        </div>
+      </section>
+      <section class="arch-section fade-in">
+        <div class="architecture-panel">
+          <h3>AI/ML Architecture</h3>
+          <div class="architecture-flow">
+            <div class="architecture-node">Data</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Preprocessing</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node node-green">Model</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Training / Inference</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Evaluation</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node node-blue">API</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node pulse">Deployment</div>
+          </div>
+        </div>
+      </section>
+      <section class="arch-section fade-in">
+        <div class="architecture-panel">
+          <h3>Cloud AI Architecture</h3>
+          <div class="architecture-flow">
+            <div class="architecture-node">AI Model</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node node-blue">Azure AI Foundry</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Azure Machine Learning</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Managed Endpoint</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node node-cyan">FastAPI</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Microsoft Entra ID</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node pulse">Enterprise Application</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-name">Vinod Kumar Gorle</div>
+      <div class="footer-role">AI / GenAI Engineer</div>
+      <div class="footer-tags">GenAI • Agentic AI • RAG • Multimodal AI • AI/ML</div>
+      <div class="footer-links">
+        <a href="https://github.com/VinodkumarGorle" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/vinodkumargorle8367" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:vinodkumargorle5@gmail.com">Email</a>
+        <a href="assets/resume/Vinod_Kumar_Gorle_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      </div>
+      <div class="copyright">© <span id="currentYear">2026</span> Vinod Kumar Gorle. All rights reserved.</div>
+    </div>
+  </footer>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

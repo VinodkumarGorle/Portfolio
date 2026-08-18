@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Vinod Kumar Gorle</title>
+  <meta name="description" content="AI engineering projects — multimodal logo search, document RAG, and real-time computer vision systems.">
+  <link rel="canonical" href="https://vinodkumargorle.dev/projects.html">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-ai fixed-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand brand-lockup" href="index.html">
+        <span class="brand-icon" aria-hidden="true">VK</span>
+        <span class="brand-text"><span class="brand-name">Vinod Kumar Gorle</span><span class="brand-subtitle">AI / GenAI Engineer</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="architecture.html">Architecture</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Switch to light mode" title="Light mode"><i class="bi bi-sun-fill"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <span class="section-label fade-in">Portfolio</span>
+      <h1 class="fade-in">AI Engineering Projects</h1>
+      <p class="section-subtitle fade-in">Production-oriented systems across multimodal search, document RAG, and real-time computer vision.</p>
+    </div>
+  </header>
+
+  <main class="container pb-5">
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 fade-in">
+        <article class="project-card">
+          <div class="project-number">01</div>
+          <h3>Enterprise AI Logo Search &amp; Multimodal Retrieval Platform</h3>
+          <p>Enterprise-grade multimodal AI search for sports/team logo retrieval with natural-language queries, visual similarity, hybrid retrieval and AI-powered query understanding.</p>
+          <div class="pipeline-flow">
+            <span class="pipeline-step"><i class="bi bi-chat-dots"></i> Query</span><span class="pipeline-arrow">→</span>
+            <span class="pipeline-step"><i class="bi bi-cpu"></i> LLM</span><span class="pipeline-arrow">→</span>
+            <span class="pipeline-step"><i class="bi bi-search"></i> Search</span><span class="pipeline-arrow">→</span>
+            <span class="pipeline-step"><i class="bi bi-check2-circle"></i> Results</span>
+          </div>
+          <div class="mb-2"><span class="tech-badge">SigLIP</span><span class="tech-badge">BGE-M3</span><span class="tech-badge">FAISS</span><span class="tech-badge">Azure AI Search</span></div>
+          <a href="projects/logo-search.html" class="project-link">View Project <i class="bi bi-arrow-right"></i></a>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-in">
+        <article class="project-card">
+          <div class="project-number">02</div>
+          <h3>Enterprise Document Q&amp;A &amp; RAG Platform</h3>
+          <p>Self-hosted GenAI document Q&amp;A with LLaMA-3, Mistral, Ollama, LangChain, all-MiniLM-L6-v2, Sentence Transformers and FAISS.</p>
+          <div class="pipeline-flow">
+            <span class="pipeline-step"><i class="bi bi-file-earmark-text"></i> Docs</span><span class="pipeline-arrow">→</span>
+            <span class="pipeline-step"><i class="bi bi-diagram-3"></i> Embeddings</span><span class="pipeline-arrow">→</span>
+            <span class="pipeline-step"><i class="bi bi-chat-left-text"></i> Answer</span>
+          </div>
+          <div class="mb-2"><span class="tech-badge">LangChain</span><span class="tech-badge">LLaMA-3</span><span class="tech-badge">FAISS</span><span class="tech-badge">FastAPI</span></div>
+          <a href="projects/document-rag.html" class="project-link">View Project <i class="bi bi-arrow-right"></i></a>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-in">
+        <article class="project-card">
+          <div class="project-number">03</div>
+          <h3>Real-Time Computer Vision &amp; Object Detection</h3>
+          <p>Video analytics with YOLOv5, OpenCV and OpenVINO for detection, tracking, people counting and edge inference.</p>
+          <div class="pipeline-flow">
+            <span class="pipeline-step"><i class="bi bi-camera-video"></i> Video</span><span class="pipeline-arrow">→</span>
+            <span class="pipeline-step"><i class="bi bi-bounding-box"></i> YOLOv5</span><span class="pipeline-arrow">→</span>
+            <span class="pipeline-step"><i class="bi bi-graph-up"></i> Analytics</span>
+          </div>
+          <div class="mb-2"><span class="tech-badge">YOLOv5</span><span class="tech-badge">OpenCV</span><span class="tech-badge">OpenVINO</span><span class="tech-badge">Edge AI</span></div>
+          <a href="projects/computer-vision.html" class="project-link">View Project <i class="bi bi-arrow-right"></i></a>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-name">Vinod Kumar Gorle</div>
+      <div class="footer-role">AI / GenAI Engineer</div>
+      <div class="footer-tags">GenAI • Agentic AI • RAG • Multimodal AI • AI/ML</div>
+      <div class="footer-links">
+        <a href="https://github.com/VinodkumarGorle" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/vinodkumargorle8367" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:vinodkumargorle5@gmail.com">Email</a>
+        <a href="assets/resume/Vinod_Kumar_Gorle_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      </div>
+      <div class="copyright">© <span id="currentYear">2026</span> Vinod Kumar Gorle. All rights reserved.</div>
+    </div>
+  </footer>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

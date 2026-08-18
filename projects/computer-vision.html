@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Vision | Vinod Kumar Gorle</title>
+  <meta name="description" content="Real-time computer vision — YOLOv5, OpenCV, OpenVINO object detection, tracking, and edge AI inference.">
+  <link rel="canonical" href="https://vinodkumargorle.dev/projects/computer-vision.html">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-ai fixed-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand brand-lockup" href="../index.html">
+        <span class="brand-icon" aria-hidden="true">VK</span>
+        <span class="brand-text"><span class="brand-name">Vinod Kumar Gorle</span><span class="brand-subtitle">AI / GenAI Engineer</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="../architecture.html">Architecture</a></li>
+          <li class="nav-item"><a class="nav-link" href="../skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="../experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="../certifications.html">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+        </ul>
+        <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Switch to light mode" title="Light mode"><i class="bi bi-sun-fill"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <span class="section-label fade-in">Project 03</span>
+      <h1 class="fade-in">Real-Time Computer Vision &amp; Object Detection</h1>
+      <p class="section-subtitle fade-in">Video analytics with YOLOv5, OpenCV, and Intel OpenVINO for detection, tracking, people counting and edge inference.</p>
+      <div class="fade-in">
+        <span class="tech-badge">Python</span><span class="tech-badge">YOLOv5</span><span class="tech-badge">OpenCV</span><span class="tech-badge">OpenVINO</span><span class="tech-badge">FP16</span><span class="tech-badge">INT8</span><span class="tech-badge">Edge AI</span><span class="tech-badge">Computer Vision</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container pb-5">
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <section class="content-section ai-card fade-in"><h2>Overview</h2><p>Real-time computer vision and video analytics for object detection, tracking, people counting, and event analysis. Optimized for edge deployment using Intel OpenVINO with FP16 and INT8 quantization.</p></section>
+        <section class="content-section ai-card fade-in"><h2>Object Detection</h2><p><strong>YOLOv5</strong> provides fast, accurate multi-class object detection with bounding boxes and confidence scores for real-time frame processing.</p></section>
+        <section class="content-section ai-card fade-in"><h2>Object Tracking</h2><p>Detected objects tracked across frames for movement analysis, dwell time, and temporal event correlation.</p></section>
+        <section class="content-section ai-card fade-in"><h2>People Counting</h2><p>ROI-based people counting tracks entries and exits through defined zones for occupancy and foot traffic analytics.</p></section>
+        <section class="content-section ai-card fade-in"><h2>Video Analytics</h2><p><strong>OpenCV</strong> handles frame extraction, ROI management, and visualization overlays for live monitoring pipelines.</p></section>
+        <section class="content-section ai-card fade-in"><h2>OpenVINO &amp; Edge AI</h2><p><strong>Intel OpenVINO</strong> optimizes YOLOv5 for edge hardware with <strong>FP16</strong> and <strong>INT8</strong> precision for low-latency inference on resource-constrained devices.</p></section>
+        <section class="content-section ai-card fade-in"><h2>Inference Optimization</h2><p>Model validation and inference benchmarking evaluate quantization trade-offs between accuracy and speed for production targets.</p></section>
+        <section class="content-section ai-card fade-in"><h2>Real-Time Computer Vision</h2><p>Full pipeline — frame capture, detection, tracking, ROI analysis, and post-processing — operates at real-time frame rates for live video analytics.</p></section>
+        <section class="content-section ai-card fade-in">
+          <h2>Technology Stack</h2>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span><span class="skill-tag">YOLOv5</span><span class="skill-tag">OpenCV</span><span class="skill-tag">OpenVINO</span><span class="skill-tag">FP16</span><span class="skill-tag">INT8</span><span class="skill-tag">Edge AI</span><span class="skill-tag">Computer Vision</span>
+          </div>
+        </section>
+      </div>
+      <div class="col-lg-4">
+        <div class="architecture-panel fade-in">
+          <h3>Pipeline Architecture</h3>
+          <div class="architecture-flow">
+            <div class="architecture-node">Video</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Frame Extraction</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node node-green">YOLOv5</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Object Detection</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Tracking</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">ROI / Event Analysis</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node">Post Processing</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="architecture-node pulse">Analytics</div>
+          </div>
+        </div>
+        <div class="mt-3 fade-in"><a href="../projects.html" class="btn-outline-ai w-100 justify-content-center"><i class="bi bi-arrow-left"></i> All Projects</a></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-name">Vinod Kumar Gorle</div>
+      <div class="footer-role">AI / GenAI Engineer</div>
+      <div class="footer-tags">GenAI • Agentic AI • RAG • Multimodal AI • AI/ML</div>
+      <div class="footer-links">
+        <a href="https://github.com/VinodkumarGorle" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/vinodkumargorle8367" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:vinodkumargorle5@gmail.com">Email</a>
+        <a href="../assets/resume/Vinod_Kumar_Gorle_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      </div>
+      <div class="copyright">© <span id="currentYear">2026</span> Vinod Kumar Gorle. All rights reserved.</div>
+    </div>
+  </footer>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
