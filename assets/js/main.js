@@ -7,7 +7,7 @@
   'use strict';
 
   const THEME_KEY = 'portfolio-theme';
-  const DEFAULT_THEME = 'dark';
+  const DEFAULT_THEME = 'light';
 
   /* Apply stored theme immediately to prevent flash */
   document.documentElement.setAttribute('data-theme', localStorage.getItem(THEME_KEY) || DEFAULT_THEME);

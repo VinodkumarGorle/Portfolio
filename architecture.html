@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Architecture | Vinod Kumar Gorle</title>
-  <meta name="description" content="AI system architectures — RAG, multimodal retrieval, AI/ML pipelines, and Azure cloud AI deployment.">
+  <meta name="description" content="AI system architectures — Enterprise RAG chatbot, multimodal logo search, computer vision pipelines, and Azure cloud AI deployment.">
   <link rel="canonical" href="https://vinodkumargorle.dev/architecture.html">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -23,13 +23,13 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="architecture.html">Architecture</a></li>
+          <li class="nav-item"><a class="nav-link active" href="architecture.html">Architecture</a></li>
           <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-        <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Switch to light mode" title="Light mode"><i class="bi bi-sun-fill"></i></button>
+        <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Dark mode"><i class="bi bi-moon-fill"></i></button>
       </div>
     </div>
   </nav>
@@ -37,90 +37,783 @@
   <header class="page-hero">
     <div class="container">
       <span class="section-label fade-in">System Design</span>
-      <h1 class="fade-in">AI System Architectures</h1>
-      <p class="section-subtitle fade-in">End-to-end patterns for retrieval, multimodal AI, machine learning, and Azure cloud deployment.</p>
+      <h1 class="fade-in">How I Design and Build AI Systems</h1>
+      <p class="section-subtitle fade-in">A visual overview of my AI/GenAI, RAG, multimodal retrieval, computer vision, and cloud AI architectures — from data ingestion through indexing, query understanding, retrieval, ranking, LLM response, API, security, and cloud deployment.</p>
     </div>
   </header>
 
   <main class="container pb-5">
-    <div class="arch-grid">
-      <section class="arch-section fade-in">
-        <div class="architecture-panel">
-          <h3>RAG Architecture</h3>
-          <div class="architecture-flow">
-            <div class="architecture-node">Documents</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node">Parsing</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node">Chunking</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node node-blue">Embeddings</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node">Vector Index</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node">Retriever</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node">Top-K</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node">Context</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node node-purple">LLM</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node pulse">Grounded Response</div>
+    <div class="arch-page-layout">
+
+      <!-- ============================================================ -->
+      <!-- SECTION 01: ENTERPRISE DOCUMENT Q&A / RAG CHATBOT            -->
+      <!-- ============================================================ -->
+      <section class="arch-major-section fade-in" aria-labelledby="arch-rag-title">
+        <span class="arch-section-num">01</span>
+        <h2 class="arch-section-title" id="arch-rag-title">Enterprise Document Q&amp;A / RAG Chatbot</h2>
+        <p class="arch-section-desc">Production-oriented self-hosted Retrieval-Augmented Generation platform for knowledge-grounded document question answering.</p>
+        <div class="arch-tech-badges" aria-label="RAG technology stack">
+          <span class="skill-tag">LLaMA-3</span>
+          <span class="skill-tag">Mistral</span>
+          <span class="skill-tag">Ollama</span>
+          <span class="skill-tag">LangChain</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">all-MiniLM-L6-v2</span>
+          <span class="skill-tag">Sentence Transformers</span>
+          <span class="skill-tag">FAISS</span>
+          <span class="skill-tag">RAG</span>
+        </div>
+
+        <div class="arch-pipelines-row">
+          <!-- 3A: OFFLINE INDEXING -->
+          <div class="arch-pipeline-zone zone-offline" aria-labelledby="rag-offline-header">
+            <div class="arch-pipeline-header" id="rag-offline-header">
+              <i class="bi bi-database" aria-hidden="true"></i> Offline / Indexing Pipeline
+            </div>
+            <div class="arch-label-tags" aria-label="Indexing stage labels">
+              <span class="arch-label-tag">Document Processing</span>
+              <span class="arch-label-tag">Text Preprocessing</span>
+              <span class="arch-label-tag">Chunk Size</span>
+              <span class="arch-label-tag">Chunk Overlap</span>
+              <span class="arch-label-tag">Embedding Generation</span>
+              <span class="arch-label-tag">Vector Indexing</span>
+            </div>
+            <div class="architecture-flow" role="img" aria-label="RAG offline indexing flow">
+              <div class="architecture-node">Documents</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Document Ingestion</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Document Parsing</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Text Preprocessing</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Text Chunking</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Chunk Overlap Optimization</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node node-blue">all-MiniLM-L6-v2</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Vector Embeddings</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node node-blue">FAISS Vector Index</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node node-green pulse">Index Ready</div>
+            </div>
+          </div>
+
+          <!-- 3B: ONLINE QUERY / CHATBOT -->
+          <div class="arch-pipeline-zone zone-online" aria-labelledby="rag-online-header">
+            <div class="arch-pipeline-header" id="rag-online-header">
+              <i class="bi bi-chat-dots" aria-hidden="true"></i> Online Query / Chatbot Pipeline
+            </div>
+            <div class="architecture-flow" role="img" aria-label="RAG online chatbot flow">
+              <div class="architecture-node">User</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node node-cyan">Chat UI</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node node-cyan">FastAPI</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Query Preprocessing</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node node-purple">Query Understanding</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Semantic Query Processing</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node node-blue">FAISS Vector Search</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Top-K Retrieval</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Relevant Document Chunks</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Context Construction</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node node-purple">LLaMA-3 / Mistral</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Context-Grounded Response</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node node-cyan pulse">Chatbot UI</div>
+            </div>
           </div>
         </div>
-      </section>
-      <section class="arch-section fade-in">
-        <div class="architecture-panel">
-          <h3>Multimodal AI Architecture</h3>
-          <div class="architecture-flow">
-            <div class="architecture-node">Image</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node node-purple">VLM</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node">Metadata</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node node-blue">BGE-M3</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node">Image</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node node-orange">SigLIP</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node node-cyan">Image Embedding</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node">Multimodal Retrieval</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node node-red">Reranking</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node pulse">Results</div>
+
+        <!-- 3C, 3D, 3E: Supporting cards -->
+        <div class="arch-support-grid">
+          <div class="arch-support-card">
+            <h4>Query Understanding</h4>
+            <ul>
+              <li>Keyword Extraction</li>
+              <li>Synonym Expansion</li>
+              <li>Intent Classification</li>
+              <li>Query Normalization</li>
+              <li>Semantic Query Processing</li>
+            </ul>
+          </div>
+          <div class="arch-support-card">
+            <h4>RAG Optimization</h4>
+            <ul>
+              <li>Top-K Retrieval</li>
+              <li>Similarity Thresholds</li>
+              <li>Chunk Size Optimization</li>
+              <li>Chunk Overlap Optimization</li>
+              <li>Embedding Model Evaluation</li>
+              <li>Retrieval Parameter Tuning</li>
+              <li>Prompt Engineering</li>
+              <li>Reranking</li>
+            </ul>
+          </div>
+          <div class="arch-support-card">
+            <h4>Response Quality</h4>
+            <ul>
+              <li>Context Grounding</li>
+              <li>Groundedness</li>
+              <li>Faithfulness</li>
+              <li>Context Relevance</li>
+              <li>Contextual Precision</li>
+              <li>Answer Correctness</li>
+              <li>Answer Accuracy</li>
+              <li>Hallucination Reduction</li>
+            </ul>
           </div>
         </div>
-      </section>
-      <section class="arch-section fade-in">
-        <div class="architecture-panel">
-          <h3>AI/ML Architecture</h3>
-          <div class="architecture-flow">
-            <div class="architecture-node">Data</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node">Preprocessing</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node node-green">Model</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node">Training / Inference</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node">Evaluation</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node node-blue">API</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node pulse">Deployment</div>
-          </div>
+
+        <!-- 3F: RAG Summary -->
+        <div class="arch-summary-banner summary-emphasis" aria-label="RAG architecture summary">
+          <span class="summary-node">Documents</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Chunking</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Embeddings</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">FAISS</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Top-K Retrieval</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Context</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">LLaMA-3 / Mistral</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Grounded Answer</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Chatbot</span>
         </div>
       </section>
-      <section class="arch-section fade-in">
-        <div class="architecture-panel">
-          <h3>Cloud AI Architecture</h3>
-          <div class="architecture-flow">
-            <div class="architecture-node">AI Model</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node node-blue">Azure AI Foundry</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node">Azure Machine Learning</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node">Managed Endpoint</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node node-cyan">FastAPI</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-            <div class="architecture-node">Microsoft Entra ID</div><div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
+
+      <!-- ============================================================ -->
+      <!-- SECTION 02: ENTERPRISE LOGO SEARCH & MULTIMODAL RETRIEVAL    -->
+      <!-- ============================================================ -->
+      <section class="arch-major-section fade-in" aria-labelledby="arch-logo-title">
+        <span class="arch-section-num">02</span>
+        <h2 class="arch-section-title" id="arch-logo-title">Enterprise AI Logo Search &amp; Multimodal Retrieval</h2>
+        <p class="arch-section-desc">Multimodal AI search architecture combining VLM-based image understanding, text and image embeddings, LLM-powered query understanding, hybrid retrieval, and relevance-based reranking for an enterprise-scale logo library.</p>
+        <div class="arch-tech-badges" aria-label="Logo search technology stack">
+          <span class="skill-tag">Azure AI Foundry</span>
+          <span class="skill-tag">Azure Machine Learning</span>
+          <span class="skill-tag">Azure AI Search</span>
+          <span class="skill-tag">Azure Blob Storage</span>
+          <span class="skill-tag">Microsoft Entra ID</span>
+          <span class="skill-tag">LangChain</span>
+          <span class="skill-tag">LLMs</span>
+          <span class="skill-tag">VLMs</span>
+          <span class="skill-tag">BGE-M3</span>
+          <span class="skill-tag">SigLIP</span>
+          <span class="skill-tag">FAISS</span>
+          <span class="skill-tag">SQL Server</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Python</span>
+        </div>
+
+        <div class="arch-pipeline-divider">Offline / Indexing Pipeline</div>
+
+        <!-- 4A: Logo Data Ingestion -->
+        <div class="arch-pipeline-zone zone-offline">
+          <div class="arch-pipeline-header"><i class="bi bi-images" aria-hidden="true"></i> Logo Data Ingestion</div>
+          <div class="arch-label-tags">
+            <span class="arch-label-tag">Image Sources</span>
+            <span class="arch-label-tag">Metadata</span>
+            <span class="arch-label-tag">Image Paths</span>
+            <span class="arch-label-tag">Visual Content</span>
+          </div>
+          <div class="architecture-flow" role="img" aria-label="Logo data ingestion flow">
+            <div class="architecture-node">Logo Data Source</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node">Image + Metadata Ingestion</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node">Image Retrieval</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node">Image Preprocessing</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node node-purple">VLM Image Understanding</div>
+          </div>
+        </div>
+
+        <!-- 4B: VLM Enrichment -->
+        <div class="arch-pipeline-zone zone-offline">
+          <div class="arch-pipeline-header"><i class="bi bi-eye" aria-hidden="true"></i> VLM Enrichment</div>
+          <div class="architecture-flow" role="img" aria-label="VLM enrichment flow">
+            <div class="architecture-node node-purple">VLM Image Analysis</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node">Captions</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node">Picture Types</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node">Structured Semantic Metadata</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node">Metadata Normalization</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node">Search Content</div>
+          </div>
+          <div class="arch-support-grid" style="margin-top:0.75rem;">
+            <div class="arch-support-card">
+              <h4>Semantic Metadata</h4>
+              <ul>
+                <li>Symbols</li>
+                <li>Semantic Meaning</li>
+                <li>Branding Style</li>
+                <li>Emotional Attributes</li>
+                <li>Team References</li>
+                <li>Fan References</li>
+                <li>Team Nicknames</li>
+                <li>Fan Nicknames</li>
+                <li>Visual Characteristics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4C: Embedding Pipeline -->
+        <div class="arch-pipeline-zone zone-offline">
+          <div class="arch-pipeline-header"><i class="bi bi-diagram-3" aria-hidden="true"></i> Embedding Pipeline</div>
+          <div class="architecture-flow" role="img" aria-label="BGE-M3 and SigLIP embedding pipeline">
+            <div class="architecture-node">Enriched Logo Data</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-branches">
+              <div class="branch-col">
+                <div class="architecture-node node-blue">BGE-M3</div>
+                <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+                <div class="architecture-node">Text Embeddings</div>
+                <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+                <div class="architecture-node">Text Vectors</div>
+              </div>
+              <div class="branch-col">
+                <div class="architecture-node node-orange">SigLIP</div>
+                <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+                <div class="architecture-node">Image Embeddings</div>
+                <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+                <div class="architecture-node">Image Vectors</div>
+              </div>
+            </div>
+            <div class="architecture-merge">
+              <div class="architecture-merge-line"></div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            </div>
+            <div class="architecture-node node-green">Indexing</div>
+          </div>
+          <p class="text-secondary text-center mt-2" style="font-size:0.72rem;"><strong>BGE-M3</strong> = semantic text representation &nbsp;|&nbsp; <strong>SigLIP</strong> = visual/image representation</p>
+        </div>
+
+        <!-- 4D: Indexing Architecture -->
+        <div class="arch-pipeline-zone zone-offline">
+          <div class="arch-pipeline-header"><i class="bi bi-hdd-stack" aria-hidden="true"></i> Indexing Architecture</div>
+          <div class="arch-support-grid">
+            <div class="arch-support-card">
+              <h4>Indexing Fields</h4>
+              <ul>
+                <li>Metadata Fields</li>
+                <li>Search Content</li>
+                <li>Text Embeddings</li>
+                <li>Image Embeddings</li>
+                <li>Keyword / Full-Text Fields</li>
+                <li>Vector Fields</li>
+              </ul>
+            </div>
+          </div>
+          <div class="architecture-flow" role="img" aria-label="Search index architecture">
+            <div class="architecture-node">Search Index</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node node-cyan">Azure AI Search / Vector Search Infrastructure</div>
+          </div>
+          <p class="text-secondary text-center mt-2" style="font-size:0.72rem;"><strong>SQL Server</strong> — Metadata / Application Data Store</p>
+        </div>
+
+        <div class="arch-pipeline-divider">Online / Query-Time Pipeline</div>
+
+        <!-- 4E: User Query Flow -->
+        <div class="arch-pipeline-zone zone-online">
+          <div class="arch-pipeline-header"><i class="bi bi-search" aria-hidden="true"></i> Online Query Pipeline</div>
+          <div class="architecture-flow" role="img" aria-label="User query understanding flow">
+            <div class="architecture-node">User Natural-Language Query</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node node-purple">LLM Query Understanding</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node">Structured Search Intent</div>
+          </div>
+          <div class="arch-support-grid" style="margin-top:0.75rem;">
+            <div class="arch-support-card">
+              <h4>LLM Query Understanding</h4>
+              <ul>
+                <li>Team Identification</li>
+                <li>League Identification</li>
+                <li>Entity Extraction</li>
+                <li>Location</li>
+                <li>Colors</li>
+                <li>Sports</li>
+                <li>Semantic Attributes</li>
+                <li>Include Conditions</li>
+                <li>Exclude Conditions</li>
+                <li>Logical Operators</li>
+                <li>Search Requirements</li>
+                <li>Query Expansion</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4F: Search Branches -->
+        <div class="arch-pipeline-zone zone-online">
+          <div class="arch-pipeline-header"><i class="bi bi-signpost-split" aria-hidden="true"></i> Hybrid Search Branches</div>
+          <div class="architecture-flow" role="img" aria-label="Lexical, semantic, and visual search branches">
+            <div class="architecture-branches branches-3">
+              <div class="branch-col">
+                <div class="architecture-node node-blue">Lexical Search</div>
+                <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+                <div class="architecture-node">Keyword Search</div>
+                <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+                <div class="architecture-node">Full-Text Search</div>
+                <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+                <div class="architecture-node">Keyword Relevance</div>
+              </div>
+              <div class="branch-col">
+                <div class="architecture-node node-blue">Semantic Search</div>
+                <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+                <div class="architecture-node">BGE-M3</div>
+                <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+                <div class="architecture-node">Text Embedding</div>
+                <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+                <div class="architecture-node">Vector Similarity</div>
+              </div>
+              <div class="branch-col">
+                <div class="architecture-node node-orange">Visual Search</div>
+                <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+                <div class="architecture-node">SigLIP</div>
+                <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+                <div class="architecture-node">Image Embedding</div>
+                <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+                <div class="architecture-node">Visual Similarity</div>
+              </div>
+            </div>
+            <div class="architecture-merge">
+              <div class="architecture-merge-line"></div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            </div>
+            <div class="architecture-node node-green">Hybrid Retrieval</div>
+          </div>
+        </div>
+
+        <!-- 4G & 4H: Filtering and Ranking -->
+        <div class="arch-pipelines-row">
+          <div class="arch-pipeline-zone zone-online">
+            <div class="arch-pipeline-header"><i class="bi bi-funnel" aria-hidden="true"></i> Metadata Filtering</div>
+            <div class="arch-support-card">
+              <ul>
+                <li>Team</li>
+                <li>League</li>
+                <li>Sport</li>
+                <li>Color</li>
+                <li>Picture Type</li>
+                <li>Other Structured Attributes</li>
+              </ul>
+            </div>
+          </div>
+          <div class="arch-pipeline-zone zone-online">
+            <div class="arch-pipeline-header"><i class="bi bi-sort-down" aria-hidden="true"></i> Ranking / Reranking</div>
+            <div class="architecture-flow">
+              <div class="architecture-node">Candidate Generation</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node node-red">Ranking / Reranking</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node pulse">Final Ranked Results</div>
+            </div>
+            <div class="arch-support-card mt-2">
+              <h4>Scoring Components</h4>
+              <ul>
+                <li>Lexical Relevance</li>
+                <li>Semantic Similarity</li>
+                <li>Visual Similarity</li>
+                <li>Keyword Coverage</li>
+                <li>Metadata Matching</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4I: Logo Search Final Flow -->
+        <div class="arch-summary-banner summary-emphasis" aria-label="Logo search architecture summary">
+          <span class="summary-node">Image + Metadata</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">VLM Enrichment</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">BGE-M3 + SigLIP</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Indexing</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">User Query</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">LLM Query Understanding</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Lexical + Semantic + Visual Search</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Metadata Filtering</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Ranking / Reranking</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Final Logo Results</span>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- SECTION 03: AI/ML & COMPUTER VISION                          -->
+      <!-- ============================================================ -->
+      <section class="arch-major-section fade-in" aria-labelledby="arch-cv-title">
+        <span class="arch-section-num">03</span>
+        <h2 class="arch-section-title" id="arch-cv-title">AI/ML &amp; Computer Vision</h2>
+        <p class="arch-section-desc">Real-time computer vision and video analytics using YOLOv5, OpenCV, and OpenVINO for object detection, tracking, and optimized inference.</p>
+        <div class="arch-tech-badges" aria-label="Computer vision technology stack">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">YOLOv5</span>
+          <span class="skill-tag">OpenCV</span>
+          <span class="skill-tag">OpenVINO</span>
+          <span class="skill-tag">FP16</span>
+          <span class="skill-tag">INT8</span>
+          <span class="skill-tag">Computer Vision</span>
+          <span class="skill-tag">Object Detection</span>
+          <span class="skill-tag">Object Tracking</span>
+          <span class="skill-tag">Video Analytics</span>
+          <span class="skill-tag">Edge AI</span>
+        </div>
+
+        <div class="arch-pipelines-row">
+          <!-- 5A: Input -->
+          <div class="arch-pipeline-zone zone-offline">
+            <div class="arch-pipeline-header"><i class="bi bi-camera-video" aria-hidden="true"></i> Computer Vision Input</div>
+            <div class="arch-label-tags">
+              <span class="arch-label-tag">Frame Processing</span>
+              <span class="arch-label-tag">Resize</span>
+              <span class="arch-label-tag">Normalization</span>
+              <span class="arch-label-tag">Region of Interest Processing</span>
+            </div>
+            <div class="architecture-flow" role="img" aria-label="CV input preprocessing flow">
+              <div class="architecture-node">Video / Image Input</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Frame Extraction</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Image Preprocessing</div>
+            </div>
+          </div>
+
+          <!-- 5B & 5C: Detection & Tracking -->
+          <div class="arch-pipeline-zone zone-online">
+            <div class="arch-pipeline-header"><i class="bi bi-bullseye" aria-hidden="true"></i> Detection &amp; Tracking</div>
+            <div class="architecture-flow" role="img" aria-label="Object detection and tracking flow">
+              <div class="architecture-node node-green">YOLOv5</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Object Detection</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Detected Objects</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Object Tracking</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Track IDs</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node">Movement / Event Analysis</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5D: Application Workflows -->
+        <div class="arch-subsection-title">Application Workflows</div>
+        <div class="arch-support-grid">
+          <div class="arch-support-card">
+            <h4>People Counting</h4>
+            <ul><li>Real-time headcount analytics</li><li>Movement tracking</li></ul>
+          </div>
+          <div class="arch-support-card">
+            <h4>ALPR / Vehicle Analytics</h4>
+            <ul><li>License plate recognition</li><li>Vehicle event analysis</li></ul>
+          </div>
+          <div class="arch-support-card">
+            <h4>Object / Event Analytics</h4>
+            <ul><li>Object-level event detection</li><li>Scene analytics</li></ul>
+          </div>
+        </div>
+
+        <!-- 5E: Inference Optimization -->
+        <div class="arch-pipeline-zone zone-offline">
+          <div class="arch-pipeline-header"><i class="bi bi-speedometer2" aria-hidden="true"></i> Inference Optimization</div>
+          <div class="arch-label-tags">
+            <span class="arch-label-tag">CPU Inference</span>
+            <span class="arch-label-tag">Inference Acceleration</span>
+            <span class="arch-label-tag">Model Optimization</span>
+          </div>
+          <div class="architecture-flow" role="img" aria-label="OpenVINO inference optimization flow">
+            <div class="architecture-node node-green">OpenVINO</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node">Inference Optimization</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node">FP16 / INT8</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node node-green pulse">Edge / Real-Time Inference</div>
+          </div>
+        </div>
+
+        <!-- 5F: Final CV Flow -->
+        <div class="arch-summary-banner summary-emphasis" aria-label="Computer vision architecture summary">
+          <span class="summary-node">Video / Image</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Preprocessing</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">YOLOv5</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Object Detection</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Object Tracking</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">People Counting / ALPR / Analytics</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">OpenVINO</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">FP16 / INT8</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Real-Time Analytics</span>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- SECTION 04: AZURE AI & CLOUD ARCHITECTURE                    -->
+      <!-- ============================================================ -->
+      <section class="arch-major-section fade-in" aria-labelledby="arch-azure-title">
+        <span class="arch-section-num">04</span>
+        <h2 class="arch-section-title" id="arch-azure-title">Azure AI &amp; Cloud Architecture</h2>
+        <p class="arch-section-desc">Cloud architecture for AI experimentation, model lifecycle management, deployment, secure API access, search, storage, and enterprise AI integration.</p>
+        <div class="arch-tech-badges" aria-label="Azure cloud technology stack">
+          <span class="skill-tag">Azure AI Foundry</span>
+          <span class="skill-tag">Azure Machine Learning</span>
+          <span class="skill-tag">Azure AI Search</span>
+          <span class="skill-tag">Azure Blob Storage</span>
+          <span class="skill-tag">Microsoft Entra ID</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Managed Endpoints</span>
+          <span class="skill-tag">Azure App Services</span>
+          <span class="skill-tag">Azure Functions</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">CI/CD</span>
+        </div>
+
+        <!-- 6A: Model Development -->
+        <div class="arch-pipelines-row">
+          <div class="arch-pipeline-zone zone-offline">
+            <div class="arch-pipeline-header"><i class="bi bi-cpu" aria-hidden="true"></i> Model Development</div>
+            <div class="architecture-flow" role="img" aria-label="Azure AI development flow">
+              <div class="architecture-node">AI / Model Development</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node node-cyan">Azure AI Foundry</div>
+            </div>
+            <div class="arch-support-card mt-2">
+              <h4>Azure AI Foundry</h4>
+              <ul>
+                <li>Model Experimentation</li>
+                <li>Model Evaluation</li>
+                <li>Prompt / AI Application Development</li>
+              </ul>
+            </div>
+            <div class="architecture-flow mt-2">
+              <div class="architecture-node node-cyan">Azure Machine Learning</div>
+            </div>
+            <div class="arch-support-card mt-2">
+              <h4>Azure Machine Learning</h4>
+              <ul>
+                <li>Experimentation</li>
+                <li>Model Lifecycle Management</li>
+                <li>Model Deployment</li>
+                <li>Managed Inference</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 6B: Deployment -->
+          <div class="arch-pipeline-zone zone-online">
+            <div class="arch-pipeline-header"><i class="bi bi-cloud-upload" aria-hidden="true"></i> Deployment</div>
+            <div class="arch-label-tags">
+              <span class="arch-label-tag">Model Serving</span>
+              <span class="arch-label-tag">REST APIs</span>
+              <span class="arch-label-tag">AI Inference</span>
+              <span class="arch-label-tag">API Integration</span>
+            </div>
+            <div class="architecture-flow" role="img" aria-label="Deployment flow">
+              <div class="architecture-node">AI Model / AI Service</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node node-cyan">Managed Endpoint</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node node-cyan">FastAPI</div>
+              <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+              <div class="architecture-node pulse">Enterprise Application</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6C: Security -->
+        <div class="arch-pipeline-zone" style="border-color:rgba(239,68,68,0.25);background:rgba(239,68,68,0.03);">
+          <div class="arch-pipeline-header"><i class="bi bi-shield-lock sec-icon" aria-hidden="true"></i> Identity &amp; Access Control</div>
+          <div class="architecture-flow" role="img" aria-label="Security and authentication flow">
+            <div class="architecture-node">User</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node node-red">Microsoft Entra ID</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node">Authentication / Authorization</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node node-cyan">FastAPI</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
+            <div class="architecture-node">Authorized AI Services</div>
+          </div>
+        </div>
+
+        <!-- Security strip -->
+        <div class="arch-security-strip" aria-label="Security overview">
+          <i class="bi bi-shield-lock sec-icon" aria-hidden="true"></i>
+          <span class="sec-node">Microsoft Entra ID</span>
+          <span class="sec-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="sec-node">Identity</span>
+          <span class="sec-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="sec-node">Authentication</span>
+          <span class="sec-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="sec-node">Authorization</span>
+          <span class="sec-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="sec-node">Secure AI API Access</span>
+        </div>
+
+        <!-- 6D: Azure Data / Search Services -->
+        <div class="arch-cloud-services">
+          <div class="arch-cloud-service-card">
+            <h5>Azure AI Search</h5>
+            <p>Semantic Search · Vector Search · Hybrid Search · Search Index</p>
+          </div>
+          <div class="arch-cloud-service-card">
+            <h5>Azure Blob Storage</h5>
+            <p>Images · Documents · AI Assets</p>
+          </div>
+        </div>
+
+        <!-- 6E: Enterprise Application -->
+        <div class="arch-pipeline-zone zone-online mt-3">
+          <div class="arch-pipeline-header"><i class="bi bi-building" aria-hidden="true"></i> Enterprise Application Layer</div>
+          <div class="architecture-flow" role="img" aria-label="Enterprise application layer">
+            <div class="architecture-node node-cyan">FastAPI</div>
+            <div class="architecture-arrow"><i class="bi bi-arrow-down" aria-hidden="true"></i></div>
             <div class="architecture-node pulse">Enterprise Application</div>
           </div>
+          <div class="arch-label-tags mt-2">
+            <span class="arch-label-tag">REST API</span>
+            <span class="arch-label-tag">AI Service Integration</span>
+            <span class="arch-label-tag">Request / Response Processing</span>
+          </div>
+        </div>
+
+        <!-- Azure summary -->
+        <div class="arch-summary-banner" aria-label="Azure cloud architecture summary">
+          <span class="summary-node">AI Development</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Azure AI Foundry</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Azure Machine Learning</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Managed Endpoint</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">FastAPI</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Microsoft Entra ID</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Azure AI Search / Blob Storage</span>
+          <span class="summary-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+          <span class="summary-node">Enterprise Application</span>
         </div>
       </section>
+
+      <!-- ============================================================ -->
+      <!-- MODELS & AI TECHNOLOGIES SUMMARY                             -->
+      <!-- ============================================================ -->
+      <section class="arch-major-section fade-in" aria-labelledby="arch-models-title">
+        <span class="arch-section-num">Summary</span>
+        <h2 class="arch-section-title" id="arch-models-title">Models &amp; AI Technologies</h2>
+        <p class="arch-section-desc">Technologies grouped by project domain — GenAI/RAG, multimodal retrieval, computer vision, and Azure cloud.</p>
+        <div class="arch-model-groups">
+          <div class="arch-model-group">
+            <h4>GenAI / RAG</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">LLaMA-3</span>
+              <span class="skill-tag">Mistral</span>
+              <span class="skill-tag">Ollama</span>
+              <span class="skill-tag">all-MiniLM-L6-v2</span>
+              <span class="skill-tag">Sentence Transformers</span>
+              <span class="skill-tag">LangChain</span>
+              <span class="skill-tag">FAISS</span>
+            </div>
+          </div>
+          <div class="arch-model-group">
+            <h4>Multimodal / Logo Search</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">VLMs</span>
+              <span class="skill-tag">BGE-M3</span>
+              <span class="skill-tag">SigLIP</span>
+              <span class="skill-tag">LangChain</span>
+              <span class="skill-tag">Azure AI Search</span>
+              <span class="skill-tag">FAISS</span>
+            </div>
+          </div>
+          <div class="arch-model-group">
+            <h4>Computer Vision</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">YOLOv5</span>
+              <span class="skill-tag">OpenCV</span>
+              <span class="skill-tag">OpenVINO</span>
+              <span class="skill-tag">FP16</span>
+              <span class="skill-tag">INT8</span>
+            </div>
+          </div>
+          <div class="arch-model-group">
+            <h4>Azure</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">Azure AI Foundry</span>
+              <span class="skill-tag">Azure Machine Learning</span>
+              <span class="skill-tag">Azure AI Search</span>
+              <span class="skill-tag">Azure Blob Storage</span>
+              <span class="skill-tag">Microsoft Entra ID</span>
+              <span class="skill-tag">FastAPI</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-name">Vinod Kumar Gorle</div>
-      <div class="footer-role">AI / GenAI Engineer</div>
-      <div class="footer-tags">GenAI • Agentic AI • RAG • Multimodal AI • AI/ML</div>
-      <div class="footer-links">
-        <a href="https://github.com/VinodkumarGorle" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://linkedin.com/in/vinodkumargorle8367" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="mailto:vinodkumargorle5@gmail.com">Email</a>
-        <a href="assets/resume/Vinod_Kumar_Gorle_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      <div class="footer-inner">
+        <div class="footer-brand-block">
+          <span class="footer-name">Vinod Kumar Gorle</span>
+          <span class="footer-sep" aria-hidden="true">|</span>
+          <span class="footer-role">AI / GenAI Engineer</span>
+          <span class="footer-sep" aria-hidden="true">|</span>
+          <span class="footer-tags-inline">GenAI • Agentic AI • RAG • Multimodal AI • AI/ML</span>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/VinodkumarGorle" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/vinodkumargorle8367" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:vinodkumargorle5@gmail.com">Email</a>
+          <a href="assets/resume/Vinod_Kumar_Gorle_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        </div>
+        <div class="copyright">© <span id="currentYear">2026</span> Vinod Kumar Gorle. All rights reserved.</div>
       </div>
-      <div class="copyright">© <span id="currentYear">2026</span> Vinod Kumar Gorle. All rights reserved.</div>
     </div>
   </footer>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

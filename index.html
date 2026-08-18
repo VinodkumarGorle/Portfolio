@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,19 +40,19 @@
           <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-        <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Switch to light mode" title="Light mode">
-          <i class="bi bi-sun-fill"></i>
+        <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Dark mode">
+          <i class="bi bi-moon-fill"></i>
         </button>
       </div>
     </div>
   </nav>
 
-  <!-- Hero: 3-column dashboard layout -->
+  <!-- Hero: 2-column layout -->
   <section class="hero-section">
     <div class="container">
-      <div class="row g-3 g-lg-4">
+      <div class="row g-3 g-lg-4 align-items-stretch">
         <!-- Left: Introduction -->
-        <div class="col-lg-4 fade-in">
+        <div class="col-lg-6 fade-in">
           <span class="hero-pill">AI | GENAI | MULTIMODAL | CLOUD</span>
           <span class="hero-badge">AI / GENAI ENGINEER</span>
           <h1 class="hero-title">BUILDING INTELLIGENT<br>AI SYSTEMS FOR<br><span class="gradient-text">REAL-WORLD PROBLEMS</span></h1>
@@ -73,82 +73,43 @@
           </div>
         </div>
 
-        <!-- Center: AI System Architecture -->
-        <div class="col-lg-4 fade-in">
-          <div class="architecture-panel">
-            <h3>AI System Architecture</h3>
-            <div class="architecture-flow">
-              <div class="architecture-node pulse"><i class="bi bi-person"></i> USER QUERY</div>
-              <div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-              <div class="architecture-node node-purple"><i class="bi bi-cpu"></i> QUERY UNDERSTANDING (LLM)</div>
-              <div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-              <div class="architecture-branches">
-                <div class="branch-col">
-                  <div class="architecture-node node-green"><i class="bi bi-search"></i> LEXICAL SEARCH</div>
-                  <div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-                </div>
-                <div class="branch-col">
-                  <div class="architecture-node node-blue"><i class="bi bi-diagram-3"></i> SEMANTIC SEARCH</div>
-                  <div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-                </div>
-                <div class="branch-col">
-                  <div class="architecture-node node-orange"><i class="bi bi-image"></i> VISUAL SEARCH</div>
-                  <div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-                </div>
-              </div>
-              <div class="architecture-merge">
-                <div class="architecture-merge-line"></div>
-                <div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-              </div>
-              <div class="architecture-row-split">
-                <div class="architecture-node node-cyan">HYBRID RETRIEVAL (FAISS)</div>
-                <div class="architecture-node">METADATA FILTER (SQL)</div>
-              </div>
-              <div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-              <div class="architecture-node node-red"><i class="bi bi-sort-down"></i> RERANKING</div>
-              <div class="architecture-arrow"><i class="bi bi-arrow-down"></i></div>
-              <div class="architecture-node node-blue pulse"><i class="bi bi-check2-circle"></i> RELEVANT RESULTS</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: I Build With -->
-        <div class="col-lg-4 fade-in">
-          <div class="architecture-panel build-with-panel">
-            <h3>I Build With</h3>
+        <!-- Right: AI Engineering Focus -->
+        <div class="col-lg-6 fade-in">
+          <div class="architecture-panel build-with-panel hero-focus-panel">
+            <h3>AI Engineering Focus</h3>
             <div class="build-with-item">
-              <span class="build-with-icon"><i class="bi bi-cpu"></i></span>
+              <span class="build-with-icon" style="background:rgba(139,92,246,0.1);color:#8b5cf6;" aria-hidden="true"><i class="bi bi-stars"></i></span>
               <div>
-                <h4>LLMs &amp; VLMs</h4>
-                <p>LLaMA-3, Mistral, Qwen-VL, LLaVA</p>
+                <h4>GenAI &amp; LLMs</h4>
+                <p>LLMs • VLMs • RAG • Prompt Engineering<br>LangChain • LLaMA-3 • Mistral • Ollama</p>
               </div>
             </div>
             <div class="build-with-item">
-              <span class="build-with-icon"><i class="bi bi-database"></i></span>
-              <div>
-                <h4>RAG &amp; Retrieval</h4>
-                <p>LangChain, FAISS, BGE-M3, Azure AI Search</p>
-              </div>
-            </div>
-            <div class="build-with-item">
-              <span class="build-with-icon"><i class="bi bi-images"></i></span>
+              <span class="build-with-icon" style="background:rgba(245,158,11,0.1);color:#f59e0b;" aria-hidden="true"><i class="bi bi-layers"></i></span>
               <div>
                 <h4>Multimodal AI</h4>
-                <p>SigLIP, VLMs, Image Embeddings, Visual Search</p>
+                <p>Image Understanding • Image Embeddings<br>SigLIP • BGE-M3 • Visual Search</p>
               </div>
             </div>
             <div class="build-with-item">
-              <span class="build-with-icon"><i class="bi bi-camera-video"></i></span>
+              <span class="build-with-icon" style="background:rgba(59,130,246,0.1);color:#3b82f6;" aria-hidden="true"><i class="bi bi-search"></i></span>
               <div>
-                <h4>AI/ML &amp; CV</h4>
-                <p>PyTorch, Scikit-learn, YOLOv5, OpenCV, OpenVINO</p>
+                <h4>AI Search &amp; Retrieval</h4>
+                <p>Semantic Search • Hybrid Search<br>Vector Search • FAISS • Azure AI Search • Reranking</p>
               </div>
             </div>
             <div class="build-with-item">
-              <span class="build-with-icon"><i class="bi bi-cloud"></i></span>
+              <span class="build-with-icon" style="background:rgba(16,185,129,0.1);color:#10b981;" aria-hidden="true"><i class="bi bi-camera-video"></i></span>
               <div>
-                <h4>Cloud &amp; Deployment</h4>
-                <p>Azure AI Foundry, Azure ML, Azure Blob, Entra ID, Docker, FastAPI</p>
+                <h4>AI/ML &amp; Computer Vision</h4>
+                <p>PyTorch • Scikit-learn • YOLOv5<br>OpenCV • OpenVINO • Edge AI</p>
+              </div>
+            </div>
+            <div class="build-with-item">
+              <span class="build-with-icon" style="background:rgba(6,182,212,0.1);color:#06b6d4;" aria-hidden="true"><i class="bi bi-cloud"></i></span>
+              <div>
+                <h4>Azure AI &amp; Engineering</h4>
+                <p>Azure AI Foundry • Azure Machine Learning<br>Azure Blob Storage • Microsoft Entra ID • FastAPI</p>
               </div>
             </div>
           </div>
@@ -287,7 +248,7 @@
         <div class="col-lg-4">
           <div class="sidebar-panel fade-in">
             <h3>Impact &amp; Metrics</h3>
-            <div class="metrics-grid">
+            <div class="metrics-grid metrics-grid-2">
               <div class="metric-card">
                 <div class="metric-value">3+</div>
                 <div class="metric-label">Years Experience</div>
@@ -295,10 +256,6 @@
               <div class="metric-card">
                 <div class="metric-value">85–90%</div>
                 <div class="metric-label">Evaluated Search Accuracy</div>
-              </div>
-              <div class="metric-card">
-                <div class="metric-value">300+</div>
-                <div class="metric-label">Logos Processed</div>
               </div>
             </div>
           </div>
@@ -330,16 +287,22 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-name">Vinod Kumar Gorle</div>
-      <div class="footer-role">AI / GenAI Engineer</div>
-      <div class="footer-tags">GenAI • Agentic AI • RAG • Multimodal AI • AI/ML</div>
-      <div class="footer-links">
-        <a href="https://github.com/VinodkumarGorle" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://linkedin.com/in/vinodkumargorle8367" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="mailto:vinodkumargorle5@gmail.com">Email</a>
-        <a href="assets/resume/Vinod_Kumar_Gorle_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      <div class="footer-inner">
+        <div class="footer-brand-block">
+          <span class="footer-name">Vinod Kumar Gorle</span>
+          <span class="footer-sep" aria-hidden="true">|</span>
+          <span class="footer-role">AI / GenAI Engineer</span>
+          <span class="footer-sep" aria-hidden="true">|</span>
+          <span class="footer-tags-inline">GenAI • Agentic AI • RAG • Multimodal AI • AI/ML</span>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/VinodkumarGorle" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/vinodkumargorle8367" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:vinodkumargorle5@gmail.com">Email</a>
+          <a href="assets/resume/Vinod_Kumar_Gorle_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        </div>
+        <div class="copyright">© <span id="currentYear">2026</span> Vinod Kumar Gorle. All rights reserved.</div>
       </div>
-      <div class="copyright">© <span id="currentYear">2026</span> Vinod Kumar Gorle. All rights reserved.</div>
     </div>
   </footer>
 
